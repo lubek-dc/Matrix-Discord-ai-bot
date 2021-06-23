@@ -9,12 +9,11 @@ from configparser import ConfigParser
 
 WIT_API_HOST = os.getenv('WIT_URL', 'https://api.wit.ai')
 WIT_API_VERSION = os.getenv('WIT_API_VERSION', '20200513')
-INTERACTIVE_PROMPT = '> '
-LEARN_MORE = 'Learn more at https://wit.ai/docs/quickstart'
 config = ConfigParser()
 config.read('../config.ini')
-TOKEN_PL = config.get('Auth', 'PL')  # for secure (hidden token)
-TOKEN_EN = config.get('Auth', 'EN') # for secure (hidden token)
+TOKEN_PL = config.get('Wit', 'PL')  # for secure (hidden token)
+TOKEN_EN = config.get('Wit', 'EN') # for secure (hidden token)
+DISCORD_TOKEN = config.get('Discord', 'TOKEN')
 jezyk = "pl"
 client = commands.Bot(command_prefix='?')
 
@@ -170,4 +169,4 @@ def text_ai(text, language):
 
 if __name__ == '__main__':
     client = MyClient()
-    client.run('ODUxNTc2ODc2MTMyODU5OTI0.YL6SxA.Kkp7x38HxSXtRebJWtWZW9atsP8')
+    client.run(DISCORD_TOKEN)
