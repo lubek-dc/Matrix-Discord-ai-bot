@@ -1,0 +1,6 @@
+keyboard~=0.13.5
+pyttsx3~=2.90
+setuptools~=56.2.0
+Socialsearch~=0.1.1
+requests~=2.25.1
+playsound~=1.2.2
