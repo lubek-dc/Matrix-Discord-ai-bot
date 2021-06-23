@@ -10,7 +10,7 @@ from configparser import ConfigParser
 WIT_API_HOST = os.getenv('WIT_URL', 'https://api.wit.ai')
 WIT_API_VERSION = os.getenv('WIT_API_VERSION', '20200513')
 config = ConfigParser()
-config.read('config.ini')
+config.read('./config.ini')
 TOKEN_PL = config.get('Wit', 'PL')  # for secure (hidden token)
 TOKEN_EN = config.get('Wit', 'EN') # for secure (hidden token)
 DISCORD_TOKEN = config.get('Discord', 'TOKEN')
